@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1s0y5oqqm6cc"]
 
-[ext_resource type="Script" uid="uid://vhqxany65qv0" path="res://Cell.gd" id="2_gwrgs"]
+[ext_resource type="Script" uid="uid://vhqxany65qv0" path="res://scripts/Cell.gd" id="2_gwrgs"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yh0nt"]
 load_path = "res://.godot/imported/minesweeper.png-173dbd50fa40c6c02e99772eb63258dc.ctex"

@@ -34,7 +34,8 @@ func _ready() -> void:
 
 func on_cell_clicked(grid_pos, index):
 	if index == MOUSE_BUTTON_LEFT:
-		reveal_cell(grid_pos)
+		if not grid[grid_pos.y][grid_pos.x].is_flagged:
+			reveal_cell(grid_pos)
 	elif index == MOUSE_BUTTON_MASK_RIGHT:
 		if not grid[grid_pos.y][grid_pos.x].is_flagged and not grid[grid_pos.y][grid_pos.x].is_revealed:
 			grid[grid_pos.y][grid_pos.x].set_texture(Util.TEXTURE_INDEX.FLAG)

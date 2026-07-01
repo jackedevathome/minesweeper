@@ -1,107 +1,108 @@
 [gd_scene format=3 uid="uid://cgmal67tutbor"]
 
-[ext_resource type="Script" uid="uid://c7cwpueo0yx75" path="res://game.gd" id="1_e2o6t"]
-[ext_resource type="PackedScene" uid="uid://c1s0y5oqqm6cc" path="res://cell.tscn" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://c7cwpueo0yx75" path="res://scripts/game.gd" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://c1s0y5oqqm6cc" path="res://scenes/cell.tscn" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://cj65wionswvww" path="res://scripts/camera_controller.gd" id="3_lnu2h"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yh0nt"]
 load_path = "res://.godot/imported/minesweeper.png-173dbd50fa40c6c02e99772eb63258dc.ctex"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e2o6t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqjtg"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_feb5d"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnu2h"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fc0e3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7jktm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_iywne"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ryrav"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eow3j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5sy4"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j5wjh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gee14"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vef74"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tnpc"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hve3p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtaks"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mfdv2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvpfn"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iotsf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dinhu"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lc2xo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvuet"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_215e1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_trtic"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7sc4i"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir15t"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_80cx4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca42v"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e8heu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rysoc"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rvswv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssvqc"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_boyg6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_264po"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e36ub"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kice"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hb5m1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5newe"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
@@ -110,6 +111,7 @@ region = Rect2(16, 32, 16, 16)
 script = ExtResource("1_e2o6t")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2068479442]
+follow_viewport_enabled = true
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=708781999]
 layout_mode = 3
@@ -138,80 +140,84 @@ columns = 5
 
 [node name="Cell" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=176402864 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_e2o6t")
+texture_normal = SubResource("AtlasTexture_yqjtg")
 
 [node name="Cell2" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1400766086 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_feb5d")
+texture_normal = SubResource("AtlasTexture_lnu2h")
 
 [node name="Cell3" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=82726796 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_fc0e3")
+texture_normal = SubResource("AtlasTexture_lbhrr")
 
 [node name="Cell4" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1416440956 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_7jktm")
+texture_normal = SubResource("AtlasTexture_iywne")
 
 [node name="Cell5" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1805883736 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_ryrav")
+texture_normal = SubResource("AtlasTexture_p57ef")
 
 [node name="Cell6" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1696485999 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_eow3j")
+texture_normal = SubResource("AtlasTexture_u5sy4")
 
 [node name="Cell7" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1018857541 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_j5wjh")
+texture_normal = SubResource("AtlasTexture_gee14")
 
 [node name="Cell8" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1646905453 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_vef74")
+texture_normal = SubResource("AtlasTexture_0tnpc")
 
 [node name="Cell9" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=364351161 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_hve3p")
+texture_normal = SubResource("AtlasTexture_vtaks")
 
 [node name="Cell10" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=411577567 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_mfdv2")
+texture_normal = SubResource("AtlasTexture_kvpfn")
 
 [node name="Cell11" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=413132299 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_iotsf")
+texture_normal = SubResource("AtlasTexture_dinhu")
 
 [node name="Cell12" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=450113875 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_lc2xo")
+texture_normal = SubResource("AtlasTexture_kvuet")
 
 [node name="Cell13" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1881722506 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_215e1")
+texture_normal = SubResource("AtlasTexture_trtic")
 
 [node name="Cell14" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1740183594 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_7sc4i")
+texture_normal = SubResource("AtlasTexture_ir15t")
 
 [node name="Cell15" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1011139155 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_80cx4")
+texture_normal = SubResource("AtlasTexture_ca42v")
 
 [node name="Cell16" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1783161812 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_e8heu")
+texture_normal = SubResource("AtlasTexture_rysoc")
 
 [node name="Cell17" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1962111662 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_rvswv")
+texture_normal = SubResource("AtlasTexture_ssvqc")
 
 [node name="Cell18" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1351648323 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_boyg6")
+texture_normal = SubResource("AtlasTexture_264po")
 
 [node name="Cell19" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=409080031 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_e36ub")
+texture_normal = SubResource("AtlasTexture_1kice")
 
 [node name="Cell20" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1577407153 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_hb5m1")
+texture_normal = SubResource("AtlasTexture_5newe")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=457603321]
+offset = Vector2(480, 270)
+script = ExtResource("3_lnu2h")
