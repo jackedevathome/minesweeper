@@ -7,11 +7,11 @@ var texture_tile_size = 16
 
 signal cell_clicked(position: Vector2, button_index: int)
 
-var grid_pos: Vector2 = Vector2.ZERO
-var is_mine : bool = false
-var is_revealed: bool = false
-var is_flagged: bool = false
-var neighbor_mines: int = 0
+@export var grid_pos: Vector2 = Vector2.ZERO
+@export var is_mine : bool = false
+@export var is_revealed: bool = false
+@export var is_flagged: bool = false
+@export var neighbor_mines: int = 0
 
 func _ready() -> void:
 	if is_mine:
