@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://cgmal67tutbor"]
+
+[ext_resource type="Script" uid="uid://c7cwpueo0yx75" path="res://game.gd" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://c1s0y5oqqm6cc" path="res://cell.tscn" id="2_e2o6t"]
+
+[node name="game" type="Node" unique_id=1643531964]
+script = ExtResource("1_e2o6t")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2068479442]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=708781999]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=1998552561]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/MarginContainer" unique_id=1902461591]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer" unique_id=592234098]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 5
+
+[node name="Cell" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=176402864 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell2" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1400766086 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell3" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=82726796 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell4" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1416440956 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell5" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1805883736 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell6" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1696485999 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell7" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1018857541 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell8" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1646905453 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell9" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=364351161 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell10" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=411577567 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell11" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=413132299 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell12" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=450113875 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell13" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1881722506 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell14" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1740183594 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell15" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1011139155 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell16" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1783161812 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell17" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1962111662 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell18" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1351648323 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell19" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=409080031 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
+
+[node name="Cell20" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1577407153 instance=ExtResource("2_e2o6t")]
+layout_mode = 2
