@@ -109,6 +109,9 @@ region = Rect2(16, 32, 16, 16)
 
 [node name="game" type="Node" unique_id=1643531964]
 script = ExtResource("1_e2o6t")
+width = 8
+height = 12
+mines_count = 16
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2068479442]
 follow_viewport_enabled = true

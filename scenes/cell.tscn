@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c1s0y5oqqm6cc"]
 
+[ext_resource type="Shader" uid="uid://cwegvqtux5jx2" path="res://resources/cell_outline_shader.gdshader" id="2_0s7o3"]
 [ext_resource type="Script" uid="uid://vhqxany65qv0" path="res://scripts/Cell.gd" id="2_gwrgs"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yh0nt"]
@@ -10,15 +11,45 @@ resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_upbjj"]
+shader = ExtResource("2_0s7o3")
+shader_parameter/border_px = 2.0
+shader_parameter/speed = 0.9
+shader_parameter/glow_intensity = 2.0
+shader_parameter/node_size = Vector2(64, 64)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upbjj"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 1, 1, 1)
+
 [node name="Cell" type="TextureButton" unique_id=176402864]
 custom_minimum_size = Vector2(40, 40)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -860.0
+offset_bottom = -440.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = SubResource("AtlasTexture_gwrgs")
 stretch_mode = 0
 script = ExtResource("2_gwrgs")
 
+[node name="Border" type="Panel" parent="." unique_id=713364965]
+visible = false
+material = SubResource("ShaderMaterial_upbjj")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_upbjj")
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
