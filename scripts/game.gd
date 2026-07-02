@@ -56,5 +56,5 @@ func place_mines():
 		var random_pos_y = randi_range(0, height-1)
 		grid[random_pos_x][random_pos_y].is_mine = true
 		grid[random_pos_x][random_pos_y].set_texture(Util.TEXTURE_INDEX.BOMB)
-		prints(random_pos_x, random_pos_y)
+		#prints(random_pos_x, random_pos_y)
 		

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c7cwpueo0yx75" path="res://scripts/game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://c1s0y5oqqm6cc" path="res://scenes/cell.tscn" id="2_e2o6t"]
 [ext_resource type="Script" uid="uid://cj65wionswvww" path="res://scripts/camera_controller.gd" id="3_lnu2h"]
+[ext_resource type="Shader" uid="uid://cwegvqtux5jx2" path="res://resources/cell_outline_shader.gdshader" id="4_lbhrr"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yh0nt"]
 load_path = "res://.godot/imported/minesweeper.png-173dbd50fa40c6c02e99772eb63258dc.ctex"
@@ -105,6 +106,25 @@ region = Rect2(16, 32, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_5newe"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lnu2h"]
+shader = ExtResource("4_lbhrr")
+shader_parameter/atlas_offset = Vector2(16, 32)
+shader_parameter/atlas_size = Vector2(16, 16)
+shader_parameter/atlas_tex_size = Vector2(64, 48)
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lnu2h"]
+load_path = "res://.godot/imported/minesweeper.png-173dbd50fa40c6c02e99772eb63258dc.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37s47"]
+resource_local_to_scene = true
+atlas = SubResource("CompressedTexture2D_lnu2h")
 region = Rect2(16, 32, 16, 16)
 
 [node name="game" type="Node" unique_id=1643531964]
@@ -221,3 +241,12 @@ texture_normal = SubResource("AtlasTexture_5newe")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=457603321]
 offset = Vector2(480, 270)
 script = ExtResource("3_lnu2h")
+zoom_speed = 0.02
+
+[node name="Cell" parent="." unique_id=173528364 instance=ExtResource("2_e2o6t")]
+material = SubResource("ShaderMaterial_lnu2h")
+offset_left = 203.0
+offset_top = 186.0
+offset_right = -717.0
+offset_bottom = -314.0
+texture_normal = SubResource("AtlasTexture_37s47")

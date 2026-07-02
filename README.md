@@ -11,6 +11,10 @@ A classic logic puzzle game implemented as a Minesweeper clone. This project was
 *   **Sandbox settings:** Set custom game parameters.
 *   **Highscore:** Get to the top of your best scores.
 
-## 🚀 Getting Started
+## 🚀 Install
 
-This project is designed to run on Godot. Basic instructions or running the game can be found in the documentation folder.
+Download the latest release for your platform to your machine.
+Then launch the executable to start the game.
+
+## 🖼️ Screenshots
+...

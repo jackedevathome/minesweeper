@@ -1,7 +1,11 @@
 extends Camera2D
 
-@export var zoom_speed = 0.1
-@export var pan_speed = 0.2
+@export var starting_zoom_val : Vector2 = Vector2(0.5, 0.5)
+@export var zoom_speed = 0.05
+@export var pan_speed = 5
+
+func _ready() -> void:
+	starting_zoom_val = zoom
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Zooming and Panning
@@ -14,6 +18,9 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	zoom = zoom.clamp(Vector2(0.5, 0.5), Vector2(10, 10))
 
-	if event is InputEventMouseMotion:
-		if Input.is_action_pressed("camera_pan_mouse_middle"):
-			global_position -= event.relative
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("reset_cam"):
+		zoom = starting_zoom_val
+
+	var pan_dir = Input.get_vector("pan_left", "pan_right", "pan_up", "pan_down")
+	offset += pan_dir * pan_speed
