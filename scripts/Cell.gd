@@ -24,3 +24,6 @@ func _gui_input(event: InputEvent) -> void:
 func set_texture(texture_index: Vector2i):
 	if texture_normal is AtlasTexture:
 		texture_normal.region = Rect2(texture_index.x, texture_index.y, texture_tile_size, texture_tile_size)
+
+func _on_mouse_entered() -> void:
+	pass # Replace with function body.

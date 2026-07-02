@@ -20,3 +20,5 @@ grow_vertical = 2
 texture_normal = SubResource("AtlasTexture_gwrgs")
 stretch_mode = 0
 script = ExtResource("2_gwrgs")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

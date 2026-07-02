@@ -16,11 +16,15 @@ func _unhandled_input(_event: InputEvent) -> void:
 		get_tree().quit()
 
 func _ready() -> void:
+	create_board()
+
+func create_board():
+	# Clear board
 	var grid_children = grid_container.get_children()
 	for x in grid_children:
 		x.queue_free()
 	
-	
+	# Recreates board
 	grid_container.columns = width
 	for x in range(width):
 		grid.append([])
@@ -34,6 +38,11 @@ func _ready() -> void:
 
 func on_cell_clicked(grid_pos, index):
 	if index == MOUSE_BUTTON_LEFT:
+		if grid[grid_pos.y][grid_pos.x].is_mine:
+			print("BOOOM!")
+			grid[grid_pos.y][grid_pos.x].set_texture(Util.TEXTURE_INDEX.BOMB)
+			## TODO REVEAL ALL TILES
+			return
 		if not grid[grid_pos.y][grid_pos.x].is_flagged:
 			reveal_cell(grid_pos)
 	elif index == MOUSE_BUTTON_MASK_RIGHT:
@@ -55,6 +64,6 @@ func place_mines():
 		var random_pos_x = randi_range(0, width-1)
 		var random_pos_y = randi_range(0, height-1)
 		grid[random_pos_x][random_pos_y].is_mine = true
-		grid[random_pos_x][random_pos_y].set_texture(Util.TEXTURE_INDEX.BOMB)
+		#grid[random_pos_x][random_pos_y].set_texture(Util.TEXTURE_INDEX.BOMB)
 		#prints(random_pos_x, random_pos_y)
 		
