@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c7cwpueo0yx75" path="res://scripts/game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://c1s0y5oqqm6cc" path="res://scenes/cell.tscn" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://ff0d5a6g80vx" path="res://scripts/hud_controller.gd" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://cj65wionswvww" path="res://scripts/camera_controller.gd" id="3_lnu2h"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yh0nt"]
@@ -109,14 +110,13 @@ region = Rect2(16, 32, 16, 16)
 
 [node name="game" type="Node" unique_id=1643531964]
 script = ExtResource("1_e2o6t")
-width = 8
-height = 12
+width = 12
 mines_count = 16
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2068479442]
+[node name="GameCanvas" type="CanvasLayer" parent="." unique_id=2068479442]
 follow_viewport_enabled = true
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=708781999]
+[node name="Control" type="Control" parent="GameCanvas" unique_id=708781999]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -124,7 +124,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=1998552561]
+[node name="MarginContainer" type="MarginContainer" parent="GameCanvas/Control" unique_id=1998552561]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -132,94 +132,161 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/MarginContainer" unique_id=1902461591]
+[node name="CenterContainer" type="CenterContainer" parent="GameCanvas/Control/MarginContainer" unique_id=1902461591]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/MarginContainer/CenterContainer" unique_id=592234098]
+[node name="GridContainer" type="GridContainer" parent="GameCanvas/Control/MarginContainer/CenterContainer" unique_id=592234098]
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 5
 
-[node name="Cell" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=176402864 instance=ExtResource("2_e2o6t")]
+[node name="Cell" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=176402864 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_lnu2h")
 
-[node name="Cell2" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1400766086 instance=ExtResource("2_e2o6t")]
+[node name="Cell2" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1400766086 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_lbhrr")
 
-[node name="Cell3" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=82726796 instance=ExtResource("2_e2o6t")]
+[node name="Cell3" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=82726796 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_iywne")
 
-[node name="Cell4" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1416440956 instance=ExtResource("2_e2o6t")]
+[node name="Cell4" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1416440956 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_p57ef")
 
-[node name="Cell5" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1805883736 instance=ExtResource("2_e2o6t")]
+[node name="Cell5" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1805883736 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_u5sy4")
 
-[node name="Cell6" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1696485999 instance=ExtResource("2_e2o6t")]
+[node name="Cell6" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1696485999 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_gee14")
 
-[node name="Cell7" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1018857541 instance=ExtResource("2_e2o6t")]
+[node name="Cell7" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1018857541 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_0tnpc")
 
-[node name="Cell8" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1646905453 instance=ExtResource("2_e2o6t")]
+[node name="Cell8" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1646905453 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_vtaks")
 
-[node name="Cell9" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=364351161 instance=ExtResource("2_e2o6t")]
+[node name="Cell9" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=364351161 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_kvpfn")
 
-[node name="Cell10" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=411577567 instance=ExtResource("2_e2o6t")]
+[node name="Cell10" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=411577567 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_dinhu")
 
-[node name="Cell11" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=413132299 instance=ExtResource("2_e2o6t")]
+[node name="Cell11" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=413132299 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_kvuet")
 
-[node name="Cell12" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=450113875 instance=ExtResource("2_e2o6t")]
+[node name="Cell12" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=450113875 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_trtic")
 
-[node name="Cell13" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1881722506 instance=ExtResource("2_e2o6t")]
+[node name="Cell13" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1881722506 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_ir15t")
 
-[node name="Cell14" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1740183594 instance=ExtResource("2_e2o6t")]
+[node name="Cell14" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1740183594 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_ca42v")
 
-[node name="Cell15" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1011139155 instance=ExtResource("2_e2o6t")]
+[node name="Cell15" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1011139155 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_rysoc")
 
-[node name="Cell16" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1783161812 instance=ExtResource("2_e2o6t")]
+[node name="Cell16" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1783161812 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_ssvqc")
 
-[node name="Cell17" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1962111662 instance=ExtResource("2_e2o6t")]
+[node name="Cell17" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1962111662 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_264po")
 
-[node name="Cell18" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1351648323 instance=ExtResource("2_e2o6t")]
+[node name="Cell18" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1351648323 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_1kice")
 
-[node name="Cell19" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=409080031 instance=ExtResource("2_e2o6t")]
+[node name="Cell19" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=409080031 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_5newe")
 
-[node name="Cell20" parent="CanvasLayer/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1577407153 instance=ExtResource("2_e2o6t")]
+[node name="Cell20" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1577407153 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_37s47")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1546964528]
+script = ExtResource("3_lbhrr")
+
+[node name="Control" type="Control" parent="HUD" unique_id=1453882003]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Control" unique_id=1488094227]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/Control/MarginContainer" unique_id=945164439]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="HUD/Control/MarginContainer/HBoxContainer" unique_id=382652896]
+layout_mode = 2
+text = "BOMBS: "
+
+[node name="EndLabel" type="Label" parent="HUD/Control" unique_id=359263218]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_top = -80.0
+offset_right = 87.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "YOU WIN
+"
+horizontal_alignment = 1
+
+[node name="RestartText" type="Label" parent="HUD/Control" unique_id=1598212251]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_top = -80.0
+offset_right = 87.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "
+Press 'R' for new game"
+horizontal_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=457603321]
 offset = Vector2(480, 270)
