@@ -8,11 +8,6 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yh0nt"]
 load_path = "res://.godot/imported/minesweeper.png-173dbd50fa40c6c02e99772eb63258dc.ctex"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lnu2h"]
-resource_local_to_scene = true
-atlas = SubResource("CompressedTexture2D_yh0nt")
-region = Rect2(16, 32, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
 resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
@@ -108,6 +103,11 @@ resource_local_to_scene = true
 atlas = SubResource("CompressedTexture2D_yh0nt")
 region = Rect2(16, 32, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt5mj"]
+resource_local_to_scene = true
+atlas = SubResource("CompressedTexture2D_yh0nt")
+region = Rect2(16, 32, 16, 16)
+
 [node name="game" type="Node" unique_id=1643531964]
 script = ExtResource("1_e2o6t")
 width = 12
@@ -143,83 +143,83 @@ columns = 5
 
 [node name="Cell" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=176402864 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_lnu2h")
+texture_normal = SubResource("AtlasTexture_lbhrr")
 
 [node name="Cell2" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1400766086 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_lbhrr")
+texture_normal = SubResource("AtlasTexture_iywne")
 
 [node name="Cell3" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=82726796 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_iywne")
+texture_normal = SubResource("AtlasTexture_p57ef")
 
 [node name="Cell4" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1416440956 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_p57ef")
+texture_normal = SubResource("AtlasTexture_u5sy4")
 
 [node name="Cell5" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1805883736 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_u5sy4")
+texture_normal = SubResource("AtlasTexture_gee14")
 
 [node name="Cell6" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1696485999 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_gee14")
+texture_normal = SubResource("AtlasTexture_0tnpc")
 
 [node name="Cell7" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1018857541 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_0tnpc")
+texture_normal = SubResource("AtlasTexture_vtaks")
 
 [node name="Cell8" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1646905453 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_vtaks")
+texture_normal = SubResource("AtlasTexture_kvpfn")
 
 [node name="Cell9" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=364351161 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_kvpfn")
+texture_normal = SubResource("AtlasTexture_dinhu")
 
 [node name="Cell10" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=411577567 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_dinhu")
+texture_normal = SubResource("AtlasTexture_kvuet")
 
 [node name="Cell11" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=413132299 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_kvuet")
+texture_normal = SubResource("AtlasTexture_trtic")
 
 [node name="Cell12" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=450113875 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_trtic")
+texture_normal = SubResource("AtlasTexture_ir15t")
 
 [node name="Cell13" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1881722506 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_ir15t")
+texture_normal = SubResource("AtlasTexture_ca42v")
 
 [node name="Cell14" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1740183594 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_ca42v")
+texture_normal = SubResource("AtlasTexture_rysoc")
 
 [node name="Cell15" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1011139155 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_rysoc")
+texture_normal = SubResource("AtlasTexture_ssvqc")
 
 [node name="Cell16" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1783161812 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_ssvqc")
+texture_normal = SubResource("AtlasTexture_264po")
 
 [node name="Cell17" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1962111662 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_264po")
+texture_normal = SubResource("AtlasTexture_1kice")
 
 [node name="Cell18" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1351648323 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_1kice")
+texture_normal = SubResource("AtlasTexture_5newe")
 
 [node name="Cell19" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=409080031 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_5newe")
+texture_normal = SubResource("AtlasTexture_37s47")
 
 [node name="Cell20" parent="GameCanvas/Control/MarginContainer/CenterContainer/GridContainer" unique_id=1577407153 instance=ExtResource("2_e2o6t")]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_37s47")
+texture_normal = SubResource("AtlasTexture_bt5mj")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1546964528]
 script = ExtResource("3_lbhrr")

@@ -1,5 +1,7 @@
 extends Node
 
+## TODO: IT SAYS BOMBS LEFT 1 WHEN WINNING!
+
 @export var width = 10
 @export var height = 10
 @export var mines_count = 12
